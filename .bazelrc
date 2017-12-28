@@ -1,0 +1,14 @@
+build:ios --define PLATFORM=ios
+build:ios --copt="-fcolor-diagnostics"
+build:ios --cxxopt="-std=c++1z"
+build:ios --ios_multi_cpus=x86_64,arm64
+build:ios --ios_minimum_os=10.0
+build:ios --apple_bitcode=embedded
+# build:ios --apple_generate_dsym
+build:ios --ios_sdk_version=11.2
+
+build:android --define PLATFORM=android
+build:android --copt="-fcolor-diagnostics"
+build:android --cxxopt="-std=c++1z"
+build:android --fat_apk_cpu=armeabi-v7a
+build:android --linkopt=-Lexternal/android_ndk/ndk/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a
