@@ -1,9 +1,6 @@
-#import <Foundation/Foundation.h>
+#include "ios/GreeterClient.h"
 
 #include "cpp/greeter_client.h"
-
-@interface OBJCGreeterClient : NSObject
-@end
 
 @implementation OBJCGreeterClient
 

@@ -7,16 +7,20 @@ objc_library(
   srcs = [
     "GreeterClient.mm",
   ],
+  hdrs = [
+    "GreeterClient.h",
+  ],
   deps = [
     "//cpp:greeter_client",
   ],
 )
 
 ios_static_framework(
-  name = "GreeterClient",
-  bundle_id = "GreeterClient",
+  name = "GreeterClientFx",
+  bundle_id = "com.spinorx.GreeterClientFx",
   minimum_os_version = "9.0",
   hdrs = [
+    "GreeterClient.h",
   ],
   deps = [
     ":greeterClientLib",

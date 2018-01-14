@@ -11,7 +11,7 @@ then
   exit
 fi
 
-bazel build -c $1 --config ios //ios:GreeterClient
+bazel build -c $1 --config ios //ios:GreeterClientFx
 if [[ "$?" != "0" ]]
 then
   exit
